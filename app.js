@@ -1,16 +1,10 @@
- 
-const div1 = document.getElementById('first');
-const div2 = document.getElementById('second');
-const div3 = document.getElementById('third');
+const nameInput = document.getElementById('name');
+const messageTextArea = document.getElementById('message');
 
-function makeRed(element) {
-    element.style.backgroundColor = "red";
-}
+nameInput.addEventListener('focus', event => {
+  event.target.className = 'highlight';
+});
 
-function makeBlue(element) {
-    element.style.backgroundColor = "blue";
-}
-
-function addStyleToElement(element, callback) {
-    callback(element);
-}
+nameInput.addEventListener('blur', event => {
+  event.target.className = '';
+});
